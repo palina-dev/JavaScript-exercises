@@ -4,6 +4,7 @@ function evenLast(data) {
     return data.filter((item, i) => i % 2 === 0)
     .reduce((prev, cur) => prev + cur, 0) * data[data.length - 1] || 0;
 }
+
 evenLast([0, 1, 2, 3, 4, 5]); // (0+2+4)*5 = 30
 ```
 ***Index Power***
@@ -19,11 +20,13 @@ function indexPower(array, n) {
         return -1;
     }
 }
+
 console.log(indexPower([1, 2, 3, 4], 2));
 
 function indexPower2(array, n) {
     return Math.pow(array[n], n) || -1;
 }
+
 console.log(indexPower2([1, 2, 3, 4], 2));
 ```
 ***Correct Sentence***
@@ -35,6 +38,7 @@ function correctSentence(text) {
     }
     return text;
 }
+
 correctSentence("greetings, friends"); // "Greetings, friends."
 correctSentence("Greetings, friends"); // "Greetings, friends."
 correctSentence("Greetings, friends."); // "Greetings, friends."
@@ -42,6 +46,7 @@ correctSentence("Greetings, friends."); // "Greetings, friends."
 function correctSentence2(text) {
     return text[0].toUpperCase() + text.replace(/\.?$/, '.').slice(1);
 }
+
 correctSentence2("greetings, friends"); // "Greetings, friends."
 correctSentence2("Greetings, friends"); // "Greetings, friends."
 correctSentence2("Greetings, friends."); // "Greetings, friends."
@@ -51,6 +56,7 @@ correctSentence2("Greetings, friends."); // "Greetings, friends."
 function digitsMultip(data) {
     return parseInt(data.toString().replace(/0+/g, '').split('').reduce((multiple, current) => multiple * current));
 }
+
 console.log(digitsMultip(123405));
 ```
 ***FizzBuzz***
@@ -95,9 +101,11 @@ fizzBuzz2(10);
 function multiply(a, b) {
     return a*b;
 }
+
 multiply(5,5);
 
 const multiply = (a, b) => Math.imul(5, 5);
+
 multiply();
 ```
 ***Say Hi***
@@ -105,6 +113,7 @@ multiply();
 function sayHi(name, age) {
     return `Hi. My name is ${name} and I'm ${age} years old`;
 }
+
 sayHi("Alex", 32);
 ```
 ***Second Index***
@@ -128,5 +137,6 @@ secondIndex("sims", "s");
 function findMessage(data) {
     return data.replace(/[^A-Z]/g, '');
 }
+
 findMessage("How are you? Eh, ok. Low or Lower? Ohhh."); //"HELLO"
 ```
