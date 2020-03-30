@@ -1,5 +1,5 @@
 ***Even Last***
-```
+```js
 function evenLast(data) {
     return data.filter((item, i) => i % 2 === 0)
     .reduce((prev, cur) => prev + cur, 0) * data[data.length - 1] || 0;
@@ -8,7 +8,7 @@ function evenLast(data) {
 evenLast([0, 1, 2, 3, 4, 5]); // (0+2+4)*5 = 30
 ```
 ***Index Power***
-```
+```js
 function indexPower(array, n) {
     for (let i = 0; i < array.length; i++) {
         if (i === n) {
@@ -30,7 +30,7 @@ function indexPower2(array, n) {
 console.log(indexPower2([1, 2, 3, 4], 2));
 ```
 ***Correct Sentence***
-```
+```js
 function correctSentence(text) {
     text = text[0].toUpperCase() + text.slice(1);
     if (!text.endsWith('.')) {
@@ -52,7 +52,7 @@ correctSentence2("Greetings, friends"); // "Greetings, friends."
 correctSentence2("Greetings, friends."); // "Greetings, friends."
 ```
 ***Digits Multiplication***
-```
+```js
 function digitsMultip(data) {
     return parseInt(data.toString().replace(/0+/g, '').split('').reduce((multiple, current) => multiple * current));
 }
@@ -60,7 +60,7 @@ function digitsMultip(data) {
 console.log(digitsMultip(123405));
 ```
 ***FizzBuzz***
-```
+```js
 function fizzBuzz(number) {
     if (number % 3 === 0 && number % 5 === 0) {
         return "Fizz Buzz";
@@ -97,7 +97,7 @@ function fizzBuzz2(data) {
 fizzBuzz2(10);
 ```
 ***Multiply***
-```
+```js
 function multiply(a, b) {
     return a*b;
 }
@@ -109,7 +109,7 @@ const multiply = (a, b) => Math.imul(5, 5);
 multiply();
 ```
 ***Say Hi***
-```
+```js
 function sayHi(name, age) {
     return `Hi. My name is ${name} and I'm ${age} years old`;
 }
@@ -117,7 +117,7 @@ function sayHi(name, age) {
 sayHi("Alex", 32);
 ```
 ***Second Index***
-```
+```js
 function secondIndex(text, symbol) {
     let indices = [];
     let arrStr = text.split('');
@@ -132,7 +132,7 @@ function secondIndex(text, symbol) {
 secondIndex("sims", "s");
 ```
 ***Secrete Message***
-```
+```js
 //new RegExp(/^[A-Z]/)
 function findMessage(data) {
     return data.replace(/[^A-Z]/g, '');
